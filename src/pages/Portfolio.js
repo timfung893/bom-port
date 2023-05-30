@@ -4,9 +4,16 @@ import img2 from '../img/portfolio/2.png';
 import img3 from '../img/portfolio/3.png';
 import img4 from '../img/portfolio/4.png';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { transition1 } from '../transitions'
 
 const Portfolio = () => {
-  return <section className='section'>
+  return <motion.section 
+  initial={{ opacity: 0, y: '-100%' }}
+  animate={{ opacity: 1, y: 0 }}
+  exit={{ opacity: 0, y: '-100%' }}
+  transition={transition1}
+  className='section'>
     <div className="container mx-auto h-full relative">
       <div className='flex flex-col lg:flex-row h:full items-center justify-center gap-x-24 text-center lg:text-left lg:pt-36 pt-24 pb-8 h-full'>
         <div className='flex flex-col lg:items-start'>
@@ -32,7 +39,7 @@ const Portfolio = () => {
       </div>
 
     </div>
-  </section>;
+  </motion.section>;
 };
 
 export default Portfolio;
