@@ -23,7 +23,7 @@ const Home = () => {
             className='w-full pt-36 pb-14 lg:pt-0 lg:pb-0 lg:w-auto z-10 lg:absolute flex flex-col justify-center items-center lg:items-start'
           >
             <h1 className='h1'>Photographer <br /> & film maker</h1>
-            <p className='mb-6'>Binh Thanh, HCM</p>
+            <h3 className='h3 mb-6 text-3xl'>Binh Thanh, HCM</h3>
             <Link to={'/contact'} className='btn mb-[30px]'>Contact Me</Link>
           </motion.div>
           <div
